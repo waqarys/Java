@@ -90,3 +90,4 @@ class Test{
 If the return type of a method is used to assign a variable defined using var, its inferred type is the return type of the method; not the type of instance returned during run time.`
 
 # Type Inference with Interfaces
+- `InterfaceTypeInferenceTest.java`
