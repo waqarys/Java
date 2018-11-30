@@ -104,3 +104,7 @@ var name = new char[]{'S','t','r','i','n','g'};
 var names = new ArrayList<String>();
 ```
 - Refer Pen class in generics package. The issue is trying to modify the immutable collection, using Collections.sort()
+
+# Passing variables to method
+- Class MethodConstruct.java
+`As long as the inferred type of a variable matches with the type of method parameter, it can be passed to it as an argument.`
