@@ -96,4 +96,4 @@ If the return type of a method is used to assign a variable defined using var, i
 ```
 var name = new char[]{'S','t','r','i','n','g'};
 ```
-![var-array](resources/images/typeinference/var-array.jpg?raw=true "var-array")
+![var-array](images/var-array.jpg?raw=true "var-array")
