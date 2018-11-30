@@ -108,3 +108,39 @@ var names = new ArrayList<String>();
 # Passing variables to method
 - Class MethodConstruct.java
 `As long as the inferred type of a variable matches with the type of method parameter, it can be passed to it as an argument.`
+
+# Reassigning values
+- As applicable to all non-final variables, you can reassign a value to inferred variables. Just ensure that the reassigned value matches with the its inferred type. The type of a variable is inferred just once.
+- The type of a local variable defined using var is inferred only once.
+```
+var age = 9;     // type inferred as int
+age = 10.9;      // won't compile
+
+StringBuilder query = new StringBuilder("SELECT"); // Type - StringBuilder
+query = query.toString() + "FROM" + "TABLE";       // won't compile;
+                          // can't convert String
+                          // to StringBuilder
+
+```
+
+# Explicit casting
+```
+var age = 29;           // inferred type of age is int
+
+byte age = 29;                // Option 1 - no type inference
+var age = (byte)29;           // Option 2 - explicit casting
+
+var letter = (char)97;        // inferred type of letter is char
+var debit = (float)17.9;      // inferred type of debit is float
+
+class Automobile {}
+class Car extends Automobile {
+    void check() {}
+}
+class Test{
+    public static void main(String[] args) {
+        var obj = (Automobile)new Car();
+        obj.check();     // Won't compile; type of obj is Automobile
+    }
+}
+```
