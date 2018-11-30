@@ -91,3 +91,9 @@ If the return type of a method is used to assign a variable defined using var, i
 
 # Type Inference with Interfaces
 - `InterfaceTypeInferenceTest.java`
+
+# Using var with Arrays
+```
+var name = new char[]{'S','t','r','i','n','g'};
+```
+![var-array](resources/images/typeinference/ivar-array.jpg?raw=true "var-array")
