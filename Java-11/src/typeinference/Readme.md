@@ -97,3 +97,10 @@ If the return type of a method is used to assign a variable defined using var, i
 var name = new char[]{'S','t','r','i','n','g'};
 ```
 ![var-array](images/var-array.jpg?raw=true "var-array")
+
+# Type Inference with Generics
+`When using var with generics, ensure you pass relevant data types within the angular brackets on the right-hand side of the assignment; so that you don't lose type safety.`
+```
+var names = new ArrayList<String>();
+```
+- Refer Pen class in generics package. The issue is trying to modify the immutable collection, using Collections.sort()
