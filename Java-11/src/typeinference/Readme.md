@@ -144,3 +144,29 @@ class Test{
     }
 }
 ```
+
+# Assigning null with explicit casting
+```
+var name = (String)null;             // Code compiles
+```
+
+# Limitations
+- The usage of var types is limited to the local variables in Java.
+- They are not allowed in public API, as method parameters or as return type of methods.
+
+```
+class var {}          // can't use var as class name
+interface var {}      // can't use var as interface name
+class Demo {
+    int var = 100;               // can't use var as instance variable name
+    static long var = 121;       // can't use var as static variable name
+
+    void var() {                 // can't use var as method name
+        int var = 10;            // cant use var as the name of a local variable
+    }
+    void aMethod(String var) {}  // can't use var as the name of method parameter
+}
+```
+
+**Code Refactoring**
+- Don't refactor your existing or legacy code, replacing existing explicit types in methods with var. It doesn't offer any benefits.
