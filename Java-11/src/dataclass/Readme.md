@@ -12,3 +12,21 @@ record Emp(String name, int age) { }        // data class - one liner code
 ![data-class](images/data-class.png?raw=true "data-class")
 
 # Aggregate and Exploded form of data class
+- Aggregaate Form
+```aidl
+record Emp(String name, int age) { }       
+```
+- Deconstruction pattern refers to the conversion from aggregate form to exploded form for a data class.
+
+# Limitations of Data Class
+- no finer control on whether your data class is extensible
+- state is mutable
+- accessibility to fields
+- additional fields or multiple constructors
+
+# Pattern matching with Data Class
+
+# Data Class and Inheritance
+- Non-abstract and abstract data classes can extend other abstract data classes
+- An abstract or non-abstract data class can extend any interface(s).
+![data-inheritance](images/data-inheritance.png?raw=true "data-inheritance")
