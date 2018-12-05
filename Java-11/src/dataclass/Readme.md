@@ -10,3 +10,5 @@ record Emp(String name, int age) { }        // data class - one liner code
 - For an abstract data class, the constructors would be protected.
 
 ![data-class](images/data-class.png?raw=true "data-class")
+
+# Aggregate and Exploded form of data class
