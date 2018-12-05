@@ -9,4 +9,4 @@ record Emp(String name, int age) { }        // data class - one liner code
 - In both cases, a data class would get default implementations of hashCode(), equals() and toString(), and accessor methods.
 - For an abstract data class, the constructors would be protected.
 
-![data-class](images/data-class.jpg?raw=true "data-class")
+![data-class](images/data-class.png?raw=true "data-class")
