@@ -30,3 +30,10 @@ record Emp(String name, int age) { }
 - Non-abstract and abstract data classes can extend other abstract data classes
 - An abstract or non-abstract data class can extend any interface(s).
 ![data-inheritance](images/data-inheritance.png?raw=true "data-inheritance")
+
+# Extending abstract data class
+```aidl
+abstract record Emp(String name, int age); 
+record Manager(String name, int age, String country) extends Emp(name, age); 
+```
+- A data class can extend a single abstract data class.
