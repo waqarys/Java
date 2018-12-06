@@ -37,3 +37,38 @@ abstract record Emp(String name, int age);
 record Manager(String name, int age, String country) extends Emp(name, age); 
 ```
 - A data class can extend a single abstract data class.
+- A data class can implement single or multiple interfaces
+
+# Additional Variables
+```aidl
+record Emp(String name, int age) { 
+    private String style; 
+    Emp(String name, int age) { 
+        //.. initialize name and age 
+        if (age => 15 && age =< 30) style = "COOL"; 
+        else if (age >= 31 && age <= 50) style = "SAFE"; 
+        else if (age >= 51) style = "ELEGANT"; 
+    } 
+    public String getStyle() { 
+        return style; 
+    } 
+} 
+```
+
+# Overriding implicit behaviour
+```aidl
+record Emp(String name, int age) { 
+    // override default constructor 
+    @Override 
+    public Emp(String name, int age) { 
+        // validate age 
+        if (age > 70) 
+            throw new IllegalArgumentException("Not employable above 70 years"); 
+        else { 
+            // call default constructor 
+            default.this(name, age); 
+        } 
+    } 
+} 
+```
+- Similarly, you can also override the default implementation of object methods such as equals(), hashCode() and toString() and others methods such as the accessor methods.
